@@ -126,46 +126,46 @@
 
 <body>
 
-    <div class="upload-block">
-        <!-- Форма для загрузки видео с ПК -->
-        <form action="/upload_video/" enctype="multipart/form-data" method="post">
-            <label for="video_file">Загрузить видео с ПК:</label>
-            <input type="file" id="video_file" name="file">
-            <button type="submit">Загрузить и обработать видео</button>
-        </form>
+<div class="upload-block">
+    <!-- Форма для загрузки видео с ПК -->
+    <form action="/upload_video/" enctype="multipart/form-data" method="post">
+        <label for="video_file">Загрузить видео с ПК:</label>
+        <input type="file" id="video_file" name="file">
+        <button type="submit">Загрузить и обработать видео</button>
+    </form>
 
-        <!-- Форма для загрузки изображений -->
-        <form action="/upload_image/" enctype="multipart/form-data" method="post">
-            <label for="image_file">Загрузить изображение:</label>
-            <input type="file" id="image_file" name="file">
-            <button type="submit">Загрузить и обработать изображение</button>
-        </form>
+    <!-- Форма для загрузки изображений -->
+    <form action="/upload_image/" enctype="multipart/form-data" method="post">
+        <label for="image_file">Загрузить изображение:</label>
+        <input type="file" id="image_file" name="file">
+        <button type="submit">Загрузить и обработать изображение</button>
+    </form>
 
-        <!-- Форма для загрузки видео с YouTube -->
-        <form action="/youtube/" method="post">
-            <label for="url">Ссылка на YouTube:</label>
-            <input type="text" id="url" name="url" placeholder="Введите URL">
-            <button type="submit">Загрузить и обработать видео</button>
-        </form>
-    </div>
+    <!-- Форма для загрузки видео с YouTube -->
+    <form action="/youtube/" method="post">
+        <label for="url">Ссылка на YouTube:</label>
+        <input type="text" id="url" name="url" placeholder="Введите URL">
+        <button type="submit">Загрузить и обработать видео</button>
+    </form>
+</div>
 
-    <!-- Вывод обработанных видео и изображений -->
-    <div class="output-block">
-        {% if video_name %}
-        <h2>Обработанное видео</h2>
-        <video width="640" height="480" controls>
-            <source src="/uploads/{{ video_name }}" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-        <a href="/uploads/{{ video_name }}" download>Скачать обработанное видео</a>
-        {% endif %}
+<!-- Вывод обработанных видео и изображений -->
+<div class="output-block">
+    {% if video_name %}
+    <h2>Обработанное видео</h2>
+    <video width="640" height="480" controls>
+        <source src="/uploads/{{ video_name }}" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+    <a href="/uploads/{{ video_name }}" download>Скачать обработанное видео</a>
+    {% endif %}
 
-        {% if image_name %}
-        <h2>Обработанное изображение</h2>
-        <img src="/uploads/{{ image_name }}" alt="Обработанное изображение">
-        <a href="/uploads/{{ image_name }}" download>Скачать обработанное изображение</a>
-        {% endif %}
-    </div>
+    {% if image_name %}
+    <h2>Обработанное изображение</h2>
+    <img src="/uploads/{{ image_name }}" alt="Обработанное изображение">
+    <a href="/uploads/{{ image_name }}" download>Скачать обработанное изображение</a>
+    {% endif %}
+</div>
 </body>
 
 </html>

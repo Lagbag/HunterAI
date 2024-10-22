@@ -1,14 +1,15 @@
+import os
+import shutil
+import subprocess
+from pathlib import Path
+
+import cv2
+import yt_dlp
 from fastapi import FastAPI, UploadFile, File, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
-from ultralytics import YOLO
-from pathlib import Path
 from fastapi.templating import Jinja2Templates
-import os
-import cv2
-import shutil
-import yt_dlp
-import subprocess
+from ultralytics import YOLO
 
 app = FastAPI()
 
@@ -69,6 +70,7 @@ def process_video(video_path, output_path):
 
     # Удаление временного файла
     os.remove(temp_output_path)
+
 
 # Функция для обработки изображения
 def process_image(image_path, output_path):
