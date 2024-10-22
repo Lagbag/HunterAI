@@ -81,4 +81,4 @@ ffmpeg: Tool for video processing and conversion.
 📜 Лицензия / License
 Этот проект лицензирован по лицензии MIT — подробности см. в файле [Лицензия MIT](LICENSE)
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [MIT LICENSE](LICENSE) file for details.
