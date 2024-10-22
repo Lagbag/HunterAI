@@ -77,3 +77,8 @@ YOLOv8: State-of-the-art object detection model for video and image processing.
 Jinja2: Template engine for rendering HTML pages.
 
 ffmpeg: Tool for video processing and conversion.
+
+📜 Лицензия / License
+Этот проект лицензирован по лицензии MIT — подробности см. в файле [Лицензия MIT](LICENSE)
+
+This project is licensed under the MIT License - see the LICENSE file for details.
